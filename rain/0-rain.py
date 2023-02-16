@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""Given a list of non-negative integers representing the heights of walls with unit width 1
+"""Given a list of non-negative integers
+representing the heights of walls with unit width 1
 as if viewing the cross-section of a relief map
 calculate how many square units of water will be retained after it rains.
 """
 
 
 def rain(walls):
-    """Calculating the square units of water that will be retained after it rains"""
+    """Calculating the square units of retained water"""
     if not walls:
         return 0
 
@@ -27,6 +28,3 @@ def rain(walls):
         water += min(left[i], right[i]) - walls[i]
 
     return water
-
-
-
